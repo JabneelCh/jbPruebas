@@ -1,0 +1,15 @@
+form-input{
+    min-width: 400px;
+    max-width: 600px;
+    width: 100%;
+    color: red;
+}
+.full-width{
+    width: 100;
+}
+.card-nuevo-producto{
+    max-width:92%;
+    margin-top:35px;
+    margin-left:4%;
+    margin-right:4%;
+}
