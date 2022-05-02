@@ -1,0 +1,18 @@
+.form-input{
+    min-width: 225px;
+    max-width: 100%;
+    width: 100%;
+    /* color: red; */
+}
+.full-width{
+    width: 100;
+}
+.card-nuevo-usuario{
+    max-width:92%;
+    margin-top:35px;
+    margin-left:4%;
+    margin-right:4%;
+}
+#wizard-picture{
+    margin-top: 10px;
+}

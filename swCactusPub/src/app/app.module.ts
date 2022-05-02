@@ -10,12 +10,22 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
 
 import { DialogComponent } from './Components/dialog/dialog.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { TicketComponent } from './Components/ticket/ticket.component';
 import { NuevoProductoComponent } from './Components/nuevo-producto/nuevo-producto.component';
 import { AboutComponent } from './Components/about/about.component';
+import { NuevoUsuarioComponent } from './Components/nuevo-usuario/nuevo-usuario.component';
+import { NuevoClienteComponent } from './Components/nuevo-cliente/nuevo-cliente.component';
+import { NuevoProveedorComponent } from './Components/nuevo-proveedor/nuevo-proveedor.component';
+import { NuevoDescuentoComponent } from './Components/nuevo-descuento/nuevo-descuento.component';
+import { NuevaFamiliaComponent } from './Components/nueva-familia/nueva-familia.component';
+import { NuevaSubfamiliaComponent } from './Components/nueva-subfamilia/nueva-subfamilia.component';
+import { ConsultarProductoComponent } from './Components/consultar-producto/consultar-producto.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +34,14 @@ import { AboutComponent } from './Components/about/about.component';
     DialogComponent,
     HeaderComponent,
     TicketComponent,
-    NuevoProductoComponent
+    NuevoProductoComponent,
+    NuevoUsuarioComponent,
+    NuevoClienteComponent,
+    NuevoProveedorComponent,
+    NuevoDescuentoComponent,
+    NuevaFamiliaComponent,
+    NuevaSubfamiliaComponent,
+    ConsultarProductoComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +53,10 @@ import { AboutComponent } from './Components/about/about.component';
     MatMenuModule,
     MatInputModule,
     MatListModule, 
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatIconModule
 
   ],
   providers: [],

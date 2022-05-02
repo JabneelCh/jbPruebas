@@ -1,6 +1,11 @@
 .mat-button{
     background-color: darkcyan;
 }
+.mat-menu-item:hover{
+    background-color: darkcyan;
+    color: aliceblue;
+}
+
 #navbar{
     width: 100%;
     background-color: darkcyan;

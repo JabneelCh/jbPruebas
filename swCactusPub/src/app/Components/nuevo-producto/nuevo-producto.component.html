@@ -83,13 +83,15 @@
 
         <mat-form-field class="full-width" appearance="fill" fxLayout="column" [style.width.%]=10>
             <mat-label>Costo</mat-label>
-            <input type="number" matInput="costoFormControl" placeholder="Costo">
-            <mat-error *ngIf="costoFormControl.hasError('required')">
+            <input matInput="costoFormControl" type="number" class="example-right-align" placeholder="0" required="true">
+            <span matPrefix>$&nbsp;</span>
+            <!-- <span matSuffix>.00</span> -->
+            <!-- <mat-error *ngIf="costoFormControl.hasError('required')">
                     Por favor costo del producto.
             </mat-error>
             <mat-error *ngIf="costoFormControl.hasError('required')">
                 Costo del producto es <strong>Requerido</strong>
-            </mat-error>
+            </mat-error> -->
         </mat-form-field>
 
         <mat-form-field class="full-width" appearance="fill" fxLayout="column" [style.width.%]=10>
@@ -127,49 +129,45 @@
             </mat-error>
         </mat-form-field>
         
-        <mat-form-field class="full-width" appearance="fill" fxLayout="column" [style.width.%]=15>
-            <mat-label>Unidad de Medida</mat-label>
-            <input type="text" matInput="umFormControl" placeholder="unidad de medida">
-            <mat-error *ngIf="umFormControl.hasError('required')">
-                    Por favor ingresa la unidad de medida del producto.
+        <mat-form-field class="full-width" appearance="fill" fxLayout="column" [style.width.%]=35>
+            <mat-label>Proveedor</mat-label>
+            <input type="text" matInput="provFormControl" placeholder="Proveedor">
+            <mat-error *ngIf="provFormControl.hasError('required')">
+                    Por favor ingresa el Proveedor del producto.
             </mat-error>
-            <mat-error *ngIf="umFormControl.hasError('required')">
-                Unidad de Medida es <strong>Requerida</strong>
+            <mat-error *ngIf="provFormControl.hasError('required')">
+                Proveedor es <strong>Requerido</strong>
             </mat-error>
         </mat-form-field>
 
-        <mat-form-field class="full-width" appearance="fill" fxLayout="column" [style.width.%]=20>
-            <mat-label>Presentación</mat-label>
-            <input type="text" matInput="presentFormControl" placeholder="Presentación">
-            <mat-error *ngIf="presentFormControl.hasError('required')">
-                    Por favor ingresa el tipo de presentacion del producto.
+        <mat-form-field class="full-width" appearance="fill" fxLayout="column" [style.width.%]=25>
+            <mat-label>Categoria</mat-label>
+            <input type="text" matInput="catFormControl" placeholder="Categoria">
+            <mat-error *ngIf="catFormControl.hasError('required')">
+                    Por favor ingresa la categoria del producto.
             </mat-error>
-            <mat-error *ngIf="presentFormControl.hasError('required')">
-                Presentación del producto es <strong>Requerida</strong>
+            <mat-error *ngIf="catFormControl.hasError('required')">
+                Categoria del producto es <strong>Requerida</strong>
             </mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width" appearance="fill" fxLayout="column" [style.width.%]=10>
-            <mat-label>Costo</mat-label>
-            <input type="number" matInput="costoFormControl" placeholder="Costo">
-            <mat-error *ngIf="costoFormControl.hasError('required')">
+            <mat-label>Stock Minimo</mat-label>
+            <input type="number" matInput="sMinFormControl" placeholder="Stock Minimo">
+            <mat-error *ngIf="sMinFormControl.hasError('required')">
                     Por favor costo del producto.
             </mat-error>
-            <mat-error *ngIf="costoFormControl.hasError('required')">
+            <mat-error *ngIf="sMinFormControl.hasError('required')">
                 Costo del producto es <strong>Requerido</strong>
             </mat-error>
         </mat-form-field>
 
-        <mat-form-field class="full-width" appearance="fill" fxLayout="column" [style.width.%]=10>
-            <mat-label>Costo x Unidad</mat-label>
-            <input type="number" matInput="costoUnitFormControl" placeholder="Costo Unitario">
-            <mat-error *ngIf="costoUnitFormControl.hasError('required')">
-                    Por favor ingrese el costo unitario del producto.
-            </mat-error>
-            <mat-error *ngIf="costoUnitFormControl.hasError('required')">
-                Costo unitario es <strong>Requerido</strong>
-            </mat-error>
-        </mat-form-field>
+    </div>
+    <div fxLayout fxLayoutAling="Center"  fxLayoutGap="20px" fxLayoutGap.xs="0">
+        <img src="{{img}}" class="center-img" id="wizardPicturePreview" title="" [style.width.%]=27 />
+    </div>
+    <div fxLayout fxLayoutAling="Center"  fxLayoutGap="20px" fxLayoutGap.xs="0">
+        <input #file type="file" name='file' id="wizard-picture" ng2FileSelect  class="showPicture">
     </div>
     </form>
 </mat-card>

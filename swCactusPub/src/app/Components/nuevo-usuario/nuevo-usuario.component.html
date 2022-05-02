@@ -1,0 +1,96 @@
+<mat-card class="card-nuevo-usuario">
+    <mat-card-title>Nuevo Usuario</mat-card-title>
+    <mat-card-subtitle> &nbsp; &nbsp; Softweed &circledR; 2022 </mat-card-subtitle>
+    <form class="form-input" >
+        <div fxLayout fxLayoutAling="Center" fxLayoutGap="20px" fxLayoutGap.xs="0" fxLayoutAlign="space-around">
+        <mat-form-field class="full-width" appearance="fill" fxLayout="column"  [style.width.%]=10>
+            <mat-label>ID</mat-label>
+            <input type="number" matInput="idFormControl" placeholder="0001" readonly >
+        </mat-form-field>
+        
+        <mat-form-field class="full-width" appearance="fill" fxLayout="column" [style.width.%]=60 >
+            <mat-label>Nombre</mat-label>
+            <input type="text" matInput="nombreFormControl" placeholder="Nombre">
+            <mat-error *ngIf="nombreFormControl.hasError('required')">
+                    Por favor ingresa el nombre del Usuario.
+            </mat-error>
+            <mat-error *ngIf="nombreFormControl.hasError('required')">
+                Nombre es <strong>Requerido</strong>
+            </mat-error>
+        </mat-form-field>
+        
+        <mat-form-field  appearance="fill" fxLayout="column" [style.width.%]=25>
+                <mat-label>Perfil</mat-label>
+                <mat-select matSelect="ListFormControl">
+                  <mat-option value="Admin">Administrador</mat-option>
+                  <mat-option value="Ventas">Ventas</mat-option>
+                </mat-select>
+                <mat-error *ngIf="ListFormControl.hasError('required')">
+                    Por Favaor seleciona un Perfil para el Usuario.
+                </mat-error>
+        </mat-form-field>
+    </div>
+    <div fxLayout fxLayoutAling="Center" fxLayoutGap="20px" fxLayoutGap.xs="0" fxLayoutAlign="space-around">
+        <mat-form-field appearance="fill"fxLayout="column" [style.width.%]=20>
+            <mat-label>Contraseña</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="fill" fxLayout="column" [style.width.%]=35>
+            <mat-label>Dirección</mat-label>
+            <input type="text" matInput="direcFormControl" placeholder="Dirección">
+            <mat-error *ngIf="direcFormControl.hasError('required')">
+                    Por favor ingresa la dirección del Usuario.
+            </mat-error>
+            <mat-hint *ngIf="direcFormControl.hasError('required')">
+                La Dirección es <strong>Requerida</strong>
+            </mat-hint>
+        </mat-form-field>
+        
+        <mat-form-field class="full-width" appearance="fill" fxLayout="column" [style.width.%]=25>
+            <mat-label>Correo</mat-label>
+            <input type="email" matInput="emailFormControl" placeholder="correo@example.com"  required>
+            <mat-error *ngIf="emailFormControl.invalid">{{getErrorMessage()}}</mat-error>
+            <mat-hint *ngIf="emailFormControl.hasError('required')">
+               El Correo es <strong>Requerido</strong>
+            </mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="fill" fxLayout="column" [style.width.%]=12>
+            <mat-label>Telefono</mat-label>
+            <input type="tel" matInput="telFormControl" #input maxlength="12" required>
+            <mat-icon matSuffix>phone</mat-icon>
+            <mat-hint>Include area code</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="fill" fxLayout="column" [style.width.%]=8>
+            <mat-label>Estatus</mat-label>
+            <mat-select matSelect="ListEstsFormControl">
+                <mat-option value="Alta">Alta</mat-option>
+                <mat-option value="Baja">Baja</mat-option>
+              </mat-select>
+              <mat-error *ngIf="ListEstsFormControl.hasError('required')">
+                  Por Favor seleciona el Estatus del Usuario.
+              </mat-error>
+        </mat-form-field>
+    </div> 
+    <div fxLayout fxLayoutAling="Center" fxLayoutGap="20px" fxLayoutGap.xs="0" >
+        
+        
+        </div>
+    <div fxLayout fxLayoutAling="Center"  fxLayoutGap="20px" fxLayoutGap.xs="0">
+        <img src="{{img}}" class="center-img" id="wizardPicturePreview" title="" [style.width.%]=27 />
+
+        <mat-form-field class="full-width" appearance="fill" fxLayout="column" [style.width.%]=73 >
+            <mat-label>Observaciones</mat-label>
+            <input type="text" matInput="nombreFormControl" placeholder="Nombre">
+        </mat-form-field>
+    </div>
+    <div fxLayout fxLayoutAling="Center"  fxLayoutGap="20px" fxLayoutGap.xs="0">
+        <input #file type="file" name='file' id="wizard-picture" ng2FileSelect  class="showPicture">
+    </div>
+    </form>
+</mat-card>

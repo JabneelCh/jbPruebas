@@ -8,7 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
   styleUrls: ['./nuevo-producto.component.css']
 })
 export class NuevoProductoComponent implements OnInit {
-
+img = 'https://plantillasdememes.com/img/plantillas/imagen-no-disponible01601774755.jpg';
   idFormControl = new FormControl('', [Validators.required]);
   nombreFormControl = new FormControl('', [Validators.required]);
   codigoBFormControl = new FormControl('', [Validators.required]);
@@ -20,6 +20,9 @@ export class NuevoProductoComponent implements OnInit {
   costoUnitFormControl = new FormControl('', [Validators.required]);
   precioVtaFormControl = new FormControl('', [Validators.required]);
   precioVtaUnidFormControl = new FormControl('', [Validators.required]);
+  provFormControl = new FormControl('', [Validators.required]);
+  catFormControl = new FormControl('', [Validators.required]);
+  sMinFormControl = new FormControl('', [Validators.required]);
 
   constructor() { }
 
